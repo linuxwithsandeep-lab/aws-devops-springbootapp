@@ -8,10 +8,10 @@ phases:
       - aws --version
 
       # Login to Amazon ECR
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 611195126552.dkr.ecr.us-east-1.amazonaws.com
+            - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 784827856270.dkr.ecr.us-east-1.amazonaws.com
 
       # ECR Repository URI
-      - REPOSITORY_URI=611195126552.dkr.ecr.us-east-1.amazonaws.com/linuxwithsandeep-lab/aws-devops-springbootapp
+      - REPOSITORY_URI=784827856270.dkr.ecr.us-east-1.amazonaws.com/spring-demo-ecr
 
       # Create unique image tag
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
